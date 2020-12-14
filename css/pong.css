@@ -1,6 +1,6 @@
 body{
-    background-color: #000; /** la couleur de la page est noire **/
-    color: #fff; /** la couleur de la div terrain est blanche **/
+    background-color: rgb(255, 255, 255); /** la couleur de la page est noire **/
+    color: rgb(245, 65, 176); /** la couleur de la div terrain est blanche **/
     font-family: monospace; /** police monospace appliquée au texte contenu dans le body **/
 
     /** permet de centrer les éléments dans la page **/
@@ -14,9 +14,9 @@ body{
 
 #terrain{
     position : relative;
-    border: 1px solid #000; /** solid permet de faire apparaitre la bordure qui ne serait que fictive sinon, soit, invisible **/
-    border-top-color: #fff; /** le bord supérieur du terrain devient blanc **/
-    border-bottom-color: #fff; /** le bord inéfrieur du terrain devient blanc **/
+    border: 1px solid #fff; /** solid permet de faire apparaitre la bordure qui ne serait que fictive sinon, soit, invisible **/
+    border-top-color:#e673be; /** le bord supérieur du terrain devient blanc **/
+    border-bottom-color: #e673be; /** le bord inéfrieur du terrain devient blanc **/
     width : 800px; /** largeur du terrain **/
     height: 400px; /** hauteur du terrain **/
 
@@ -29,13 +29,13 @@ body{
 
     width: 20px; /** largeur du carré **/
     height:20px; /** hauteur du carré **/
-    background-color: white; /** couleur de fond de la balle **/
+    background-color: #e673be; /** couleur de fond de la balle **/
     border-radius:100%; /** permet d'arrondir les angles du carré pour avoir une balle parfaitement ronde **/
 }
 
 .raquette{
     position : absolute;
-    background-color : white;
+    background-color : #e673be;
     width : 10px;
     height : 100px;
     top:10%;
@@ -66,27 +66,27 @@ body{
     left:50%;
 }**/
 
-.score {
-    /**Propriétés communes au score**/
-        display: flex;
-        padding-top: 20%;
-        text-align: center;
-        font-size: 30px;
-    }
     
-#Sgauche {
-    /**Différenciation du score gauche**/
-    padding-left: 25%;
+#Score {
+    display: flex;
+    padding-top: 60%;
+    text-align: center;
+    font-size: 20px;
     float: left;
-    color: blue;
+    color: #e673be;
+  }
+
+  #vies{
+    display: flex;
+    padding-top: 60%;
+    padding-left : 75%;
+    text-align: center;
+    font-size: 20px;
+    float: left;
+    color: #e673be;
   }
     
-#Sdroite {
-     /**Différenciation du score droite**/
-     padding-right: 25%;
-     float: right;
-     color: green;
-  }
+
 
 .ecran-debut{
     transition: all 3s;
@@ -96,7 +96,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(255, 255, 255, 0.8);
     z-index: 1;
     display: flex;
 

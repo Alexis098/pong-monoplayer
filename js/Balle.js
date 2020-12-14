@@ -10,6 +10,7 @@ class Balle{ //Une classe sert seulement pour y répertorier des variables
         this.acceleration=0.5;
         this.vitesseMaxG=3;
         this.vitesseMaxD=-3;
+        this.vies=5;
         
     }
 
@@ -72,12 +73,14 @@ class Balle{ //Une classe sert seulement pour y répertorier des variables
             //raquetteG.gagne();
             this.gauche=terrain.largeur/2;
             this.haut=terrain.hauteur/2;
+            this.vies=this.vies-1;
         }
         // la balle revient au centre lorsqu'elle touche la gauche du terrain
         if(this.gauche<0){
             //raquetteD.gagne();
             this.gauche=terrain.largeur/2;
             this.haut=terrain.hauteur/2;
+            this.vies=this.vies-1;
         }
 
         //rebonds sur les raquettes
@@ -120,6 +123,11 @@ class Balle{ //Une classe sert seulement pour y répertorier des variables
         this.majHTML();
         /*this.gagne();*/
     }  
+    vieszero(){
+        if (this.vies=0){
+            
+        }
+    }
 }
 
 // déclaration de la variable js balle qui reprend les valeurs de la classe Balle qui reprend des valeurs css de l'id balle
